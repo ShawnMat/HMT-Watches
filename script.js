@@ -54,3 +54,24 @@ document.querySelector(".slider").addEventListener("mouseleave", startAutoSlide)
 
 showSlide(index);
 startAutoSlide();
+
+
+const slider = document.querySelector(".watch-images");
+const cards = document.querySelectorAll(".watch-cont");
+
+const gap = 40; 
+const cardWidth = cards[0].offsetWidth + gap;
+
+document.getElementById("next2").addEventListener("click", () => {
+  slider.scrollBy({
+    left: cardWidth,
+    behavior: "smooth"
+  });
+});
+
+document.getElementById("prev2").addEventListener("click", () => {
+  slider.scrollBy({
+    left: -cardWidth,
+    behavior: "smooth"
+  });
+});

@@ -136,7 +136,8 @@ nav p:hover{
     display: flex;
     gap: 5px;
 }
-/* .slide-images{
+/*
+.slide-images{
     position: relative;
     height: 600px;
     width: 100%;
@@ -147,10 +148,10 @@ nav p:hover{
     height:100%;
     animation-name: slide;
     animation-duration: 15s;
-    animation-iteration-count: infinite; */
-    /* z-index: 1000; */
+    animation-iteration-count: infinite; 
+    z-index: 1000;
    
-    /* animation-delay: 2s;
+    animation-delay: 2s;
 }
 .slide-images img:nth-child(1){
     animation-delay: 0s;
@@ -166,7 +167,7 @@ nav p:hover{
 }   
 .slide-images img:nth-child(5){
     animation-delay: 12s;
-} */
+}  */
 
 .slider {
   position: relative;
@@ -188,7 +189,7 @@ nav p:hover{
 }
 
 /* Buttons */
-.prev, .next {
+.prev, .next {  
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -314,10 +315,18 @@ h2{
     color: rgb(77, 76, 76);
 }
 .watch-images{
+    position: relative;
     display: flex;
-    margin: 5%;
+    margin: 0 auto;
     gap: 30px;
-    justify-content: center;
+    width: 70%;
+    overflow: auto;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* align-content: center; */
+}
+.watch-images::-webkit-scrollbar{
+    display: none;
 }
 
 .watch-images #watch-image-option{
@@ -325,6 +334,30 @@ h2{
     width: 200px;
     border-radius: 10px;
 }
+.scroll-container{
+    position: relative;
+    /* width: 90%; */
+}
+
+.scroll-container button{
+    position: absolute;
+    top: 28%;
+    right: -1%;
+}
+#next2{
+    top: 28%;
+    right: 13%;
+    transform: translate(-20,-20)
+    /* bottom: 0%; */
+}
+#prev2{
+    /* top: 28%;
+    left: -1%; */
+    /* bottom: 0%; */
+    right: ;
+}
+
+
 .option h3{
     color: grey;
 }
