@@ -315,7 +315,9 @@ h2{
 .watch-categories{
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 40px;
+    /* below code is just for testing */
+    /* overflow: auto; */
 }
 .trending h2{
     color: rgb(77, 76, 76);
@@ -470,7 +472,8 @@ h2{
     width: 200px;
     border-radius: 10px;   
 }
-.option:hover{
+/* Why did I even do this?? */
+.collection-option:hover{
     transform: scale(1.7);
 
 }
@@ -680,6 +683,9 @@ h2{
     height: 25px;
 }
 
+.accordian-container{
+    display: none;
+}
 
 
 
@@ -823,12 +829,160 @@ h2{
         opacity: 1;
     }
     .men-women{
-        display: block;
-        /* justify-content: center; */
+        /* display: flex; */
+        flex-wrap: wrap;
+
+        justify-content: center;
         /* gap: 20px   ; */
     }
     .shop-for{
         /* display: flex; */
         justify-content: center;
     }
+
+    .watch-categories{
+        display:flex;
+        gap:20px;
+
+        overflow-x:auto;
+        /* white-space:nowrap; */
+
+        padding:10px;
+    }
+
+    .option{
+        /* min-width:200px;
+        flex-shrink:0; */
+
+        /* background:#eee; */
+        padding:20px;
+        /* border-radius:10px; */
+    }
+    .option h3{
+        font-size: 15px;
+    }
+
+    .watch-categories::-webkit-scrollbar{
+        display:none;
+    }
+    .footer-dropdown{
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-cont{
+        display: flex;
+        flex-direction: column;
+    }
+    /*
+    .footer-content{
+        display: none;
+        opacity: 0;
+    } */
+    
+    /* #footer-dropdown{
+    display:flex;
+    justify-content:space-between;
+
+    cursor:pointer;
+    }
+
+    .footer-content{
+        display:none;
+
+        flex-direction:column;
+        gap:10px;
+    } */
+
+    /* .footer-dropdown{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    cursor:pointer;
+    }
+
+    .footer-content{
+        display:none;
+
+        flex-direction:column;
+        gap:10px;
+
+        padding-left:10px;
+    }
+
+    .footer-content.show{
+        display:flex;
+    } */
+
+
+
+    .footer
+    {
+            width:100%;
+            background:#0037b3;
+            color:white;
+            padding:20px;
+        }
+
+        .footer-cont{
+            display:flex;
+            flex-direction:column;
+            gap:20px;
+        }
+
+        .footer-dropdown{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+
+            cursor:pointer;
+
+            padding:15px 0;
+
+            font-size:18px;
+            font-weight:bold;
+        }
+
+        .footer-dropdown p{
+            transition:0.3s;
+        }
+
+        /* Rotate arrow */
+        .footer-dropdown.active p{
+            transform:rotate(180deg);
+        }
+
+        .footer-content{
+            display:none;
+
+            flex-direction:column;
+            gap:12px;
+
+            padding-left:10px;
+            padding-bottom:10px;
+        }
+
+        .footer-content.show{
+            display:flex;
+        }
+
+        .footer-content div{
+            font-size:15px;
+        }
+
+        .social-media{
+            display:flex;
+            gap:15px;
+        }
+
+        #media-icons{
+            width:25px;
+            height:25px;
+        }
+
+        .hmt-cont{
+            margin-top:20px;
+        }
+
+
 }

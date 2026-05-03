@@ -98,3 +98,60 @@ document.getElementById("prev3").addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+
+const headers = document.querySelectorAll(".accordian-header");
+
+headers.forEach(header => {
+
+    header.addEventListener("click", () => {
+
+        header.classList.toggle("active");
+
+        const content = header.nextElementSibling;
+
+        if(content.style.maxHeight){
+
+            content.style.maxHeight = null;
+
+        }else{
+
+            content.style.maxHeight = content.scrollHeight + "px";
+
+        }
+
+    });
+
+});
+// function dropdown(){
+
+//     const content = document.querySelector(".footer-content");
+
+//     if(content.style.display === "block"){
+
+//         content.style.display = "none";
+
+//     }else{
+
+//         content.style.display = "block";
+
+//     }
+
+// }
+
+
+
+        const dropdowns = document.querySelectorAll(".footer-dropdown");
+
+        dropdowns.forEach(dropdown => {
+
+            dropdown.addEventListener("click", () => {
+
+                dropdown.classList.toggle("active");
+
+                const content = dropdown.nextElementSibling;
+
+                content.classList.toggle("show");
+
+            });
+
+        });
