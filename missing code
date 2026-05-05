@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HMT Watches</title>
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- header -->
@@ -81,7 +81,6 @@
                 <p>STORE LOCATOR</p>
             </div>
         </div>
-        
         <img src="/icons/search.png" alt="search" id="icons" style="width: 30px; height: 30px;" >
     </nav>
     <!-- slide-show-images -->
@@ -641,10 +640,6 @@
     </div>
 
     
-<<<<<<< HEAD:pages/homepage.html
-    <script src="/scripts/script.js"></script>
-=======
     <script src="script.js"></script>
->>>>>>> 0086aeebe75f6e62c7f42e2d4edbcf65af5373d9:homepage.html
 </body>
 </html>
