@@ -4,7 +4,7 @@
     font-family: "Poppins";
     margin:0;
     box-sizing: border-box;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 /* body{
     background-color: rgb(169, 247, 0);
@@ -43,7 +43,7 @@ header .options{
     width: 15px;
     height: 15px;
 }
-#menu{
+.menu{
     width: 30px;
     height: 30px;
     display: none;
@@ -104,6 +104,19 @@ nav{
 .hide-nav{
     opacity: 0;
     visibility: hidden;
+    /* transform: translateY(-10px); */
+    /* transition: 0.3s ease; */
+}
+.show-nav{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.menu-option{
+    display: none;
+}
+.show-menu{
+    display: block;
 }
 nav p{
     font-size: small;
@@ -145,7 +158,8 @@ nav p:hover{
     /* opacity: 0; */
     margin: 2%;
     padding: 30%;
-    width: min(100%,1000px);
+    /* width: min(100%,1000px); */
+    width: 700px;
     /* border: #000000; */
     opacity: 0;
     visibility: hidden;
@@ -1089,8 +1103,11 @@ h2{
     header .support{
         display: none;
     }
-    #menu{
+    .menu{
         display: block;
+    }
+    .menu-option{
+        display: none;
     }
     .mobile-support{
         display: block;

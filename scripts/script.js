@@ -99,7 +99,7 @@ document.getElementById("prev3").addEventListener("click", () => {
   });
 });
 
-const menuBtn = document.getElementById("menu");
+const menuBtn = document.querySelector(".menu");
 const menuPopup = document.querySelector(".menu-popup");
 
 menuBtn.addEventListener("click", () => {
@@ -107,23 +107,68 @@ menuBtn.addEventListener("click", () => {
 });
 
 // window.scroll()
+// const menuOption = document.querySelector(".menu-option");
+// const leftCont = document.querySelector(".left-cont");
+// const rightCont = document.querySelector(".right-cont");
+
+// window.addEventListener("scroll", function(){
+
+//     if(window.scrollY > 100){
+
+//         menuOption.classList.add("show-menu");
+
+//         leftCont.classList.add("hide-nav");
+//         rightCont.classList.add("hide-nav");
+
+//     }
+//     else{
+
+//         menuOption.classList.remove("show-menu");
+
+//         leftCont.classList.remove("hide-nav");
+//         rightCont.classList.remove("hide-nav");
+
+//     }
+
+// });
+                     
+const menuOption = document.querySelector(".menu-option");
 const leftCont = document.querySelector(".left-cont");
 const rightCont = document.querySelector(".right-cont");
+let menuOpened = false; 
+menuOption.addEventListener("click", function () {
 
-window.addEventListener("scroll", function(){
+    menuOpened = !menuOpened;
 
-    if(window.scrollY > 100){
+    if (menuOpened) {
+        leftCont.classList.add("show-nav");
+        rightCont.classList.add("show-nav");
 
+        leftCont.classList.remove("hide-nav");
+        rightCont.classList.remove("hide-nav");
+    } else {
+        leftCont.classList.remove("show-nav");
+        rightCont.classList.remove("show-nav");
+    }
+});
+
+
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 100) {
+        menuOption.classList.add("show-menu");
         leftCont.classList.add("hide-nav");
         rightCont.classList.add("hide-nav");
 
-    }
-    else{
+        leftCont.classList.remove("show-nav");
+        rightCont.classList.remove("show-nav");
 
+        menuOpened = false; 
+    } 
+    else {
+        menuOption.classList.remove("show-menu");
         leftCont.classList.remove("hide-nav");
         rightCont.classList.remove("hide-nav");
 
     }
 
 });
-                                                                                                  
