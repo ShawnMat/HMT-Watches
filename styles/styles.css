@@ -517,7 +517,6 @@ h2{
     border-radius: 10px;
     padding: 10px 15px 10px 15px;
     box-sizing: content-box;
-    /* opacity: 0; */
 }
 #btn-options:hover{
     cursor: pointer;
@@ -665,6 +664,24 @@ h2{
 .paragraph{
     margin: 4% 10% 2% 10%;
     color: #6e6d6d;
+}
+.btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+}
+#btn-options1{
+    border: none;
+    height: 15%;
+    width: 20%;
+    gap: 20px;
+    background-color: #000000;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px 10px 15px;
+    /* box-sizing: content-box; */
+    transition: 0.7s ease
 }
 
 #btn-options1:hover{
