@@ -172,3 +172,19 @@ window.addEventListener("scroll", function () {
     }
 
 });
+
+// Accordian
+const items = document.querySelectorAll(".accordian-item");
+items.forEach(item => {
+    const header = item.querySelector(".accordian-header");
+    header.addEventListener("click", () => {
+        items.forEach(i => {
+            if (i !== item) {
+                i.classList.remove("active");
+            }
+        });
+        item.classList.toggle("active");
+
+    });
+
+});

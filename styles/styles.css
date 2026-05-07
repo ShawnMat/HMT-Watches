@@ -36,7 +36,7 @@ header .options{
 
 }
 .options{
-    gap: 40px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 #icons{
@@ -830,7 +830,11 @@ h2{
     flex-wrap: wrap;
     gap: 9%;
     margin-top:30px;
-    padding: 20px
+    padding: 20px;
+    /* display: none; */
+}
+.footer-dropdown{
+    font-weight: bold;
 }
 #media-icons{
     width: 25px;
@@ -841,6 +845,44 @@ h2{
     display: none;
 }
 
+/* Accordian */
+.accordian-container{
+    width: 100%;
+    background: #0033AB;
+    color: white;
+}
+
+.accordian-item{
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.accordian-header{
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.accordian-content{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: white;
+    color: black;
+    padding: 0 15px;
+}
+
+.accordian-item.active .accordian-content{
+    max-height: 300px; /* enough space for content */
+    padding: 10px 15px;
+}
+
+.accordian-item.active .accordian-header p{
+    transform: rotate(180deg);
+    transition: 0.3s ease;
+}
 
 
 /* media queries for phone */
@@ -1076,7 +1118,7 @@ h2{
 
 } */
 
-@media (max-width:767px){
+@media (max-width:799px){
     .header{
         width: 100%;
     }
@@ -1117,6 +1159,14 @@ h2{
     }
     #next2, #prev2, #next3, #prev3 {
         display: none;
+    }
+}
+@media (max-width: 598px){
+    .footer-cont{
+        display: none;
+    }
+    .accordian-container{
+        display: block;
     }
 }
 
